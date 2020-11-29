@@ -1,0 +1,32 @@
+{
+  "dashboard": {
+    "purchasing": 910,
+    "website": "www.example.com"
+  },
+  "courses": [
+    {
+      "title": "Raspberry Pi",
+      "price" : 50,
+      "copies": 6,
+      "details" : {
+        "site": "www.site.com"
+      }
+    },
+    {
+      "title": "Python Development",
+      "price" : 5008,
+      "copies": 612,
+      "details" : {
+        "site": "www.djangoproject.com"
+      }
+    },
+    {
+      "title": "Github",
+      "price" : 500,
+      "copies": 60,
+      "details" : {
+        "site": "www.rpasite.com"
+      }
+    }
+  ]
+}

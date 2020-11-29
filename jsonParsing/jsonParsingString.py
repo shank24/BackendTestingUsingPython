@@ -2,6 +2,7 @@ import json
 
 courses = '{"name": "Shanky", "languages": ["Java","Python"]}'
 
+print(type(courses))
 #Loads Method parse and it returns dict.
 dict_courses = json.loads(courses)
 
@@ -13,3 +14,5 @@ print(type(list_language))
 
 for i in list_language:
     print(i)
+
+
