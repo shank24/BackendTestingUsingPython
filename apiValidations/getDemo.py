@@ -1,9 +1,12 @@
-import requests,json,jsonpath
-from requests.auth import HTTPBasicAuth
+import configparser
+import requests
 
-url = "https://api.getpostman.com/collections"
-headers = {"X-Api-Key":"PMAK-5fbc920d2e116d00438ba11a-0fbc28fc41915c6b7c533c28a9ec5132fd"}
-response = requests.get(url,headers=headers)
+config = configparser.ConfigParser()
+config.read('/home/shanky/PycharmProjects/backendTesting/utilities/properties.ini')
+
+# url = "https://api.getpostman.com/collections"
+headers = {"X-Api-Key": "PMAK-5fbc920d2e116d00438ba11a-0fbc28fc41915c6b7c533c28a9ec5132fd"}
+response = requests.get(config['API']['endpoint'] + 'collections', headers=headers)
 
 # print(response.content)
 # print(response.status_code)
@@ -21,4 +24,3 @@ assert response.status_code == 200
 print(response.headers)
 assert response.headers['Content-Type'] == 'application/json; charset=utf-8'
 print(response.cookies)
-
