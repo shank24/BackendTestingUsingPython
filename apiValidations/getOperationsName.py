@@ -1,8 +1,9 @@
-import requests, json
+import requests
+from utilities.configurations import getConfig,getHeaders
+from utilities.resources import APIResource
 
-url = "https://api.getpostman.com/me"
-headers = {"X-Api-Key": "PMAK-5fbc920d2e116d00438ba11a-0fbc28fc41915c6b7c533c28a9ec5132fd"}
-response = requests.get(url, headers=headers)
+url = getConfig()['API']['endpoint'] + APIResource.getCollectionId
+response = requests.get(url, headers=getHeaders())
 
 json_response = response.json()
 print(type(json_response))

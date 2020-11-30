@@ -1,12 +1,9 @@
-import configparser
 import requests
+from utilities.configurations import getConfig,getHeaders
+from utilities.resources import APIResource
 
-config = configparser.ConfigParser()
-config.read('/home/shanky/PycharmProjects/backendTesting/utilities/properties.ini')
-
-# url = "https://api.getpostman.com/collections"
-headers = {"X-Api-Key": "PMAK-5fbc920d2e116d00438ba11a-0fbc28fc41915c6b7c533c28a9ec5132fd"}
-response = requests.get(config['API']['endpoint'] + 'collections', headers=headers)
+url = getConfig()['API']['endpoint'] + APIResource.getCollection
+response = requests.get(url, headers=getHeaders())
 
 # print(response.content)
 # print(response.status_code)
