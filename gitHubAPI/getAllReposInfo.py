@@ -1,5 +1,5 @@
 import requests
-from utilities.configurations import getConfig , getToken
+from utilities.configurations import getConfig, getToken
 from utilities.resources import GITResource
 
 #This session has required authentication stored in the se.
