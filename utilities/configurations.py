@@ -1,4 +1,5 @@
 import configparser
+import random
 
 
 def getConfig():
@@ -17,3 +18,8 @@ def getToken():
     headers = {"authorization": "Bearer f4b97769c3b0736020dbc92b46a7412f279aaf65",
                "Content-Type": "application/json"}
     return headers
+
+
+def getRandomNumber():
+    num = random.randint(1, 1000)
+    return num

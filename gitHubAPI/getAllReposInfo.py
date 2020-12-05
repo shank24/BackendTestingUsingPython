@@ -9,4 +9,4 @@ se.headers = getToken()
 url = getConfig()['GITAPI']['endpoint'] + GITResource.getRepos
 response = se.get(url)
 
-print(response.content)
+print(response.status_code)

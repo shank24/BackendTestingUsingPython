@@ -1,5 +1,5 @@
 import requests
-from utilities.configurations import getConfig,getHeaders
+from utilities.configurations import getConfig, getHeaders, getRandomNumber
 from utilities.resources import APIResource
 
 from payload.postPayload import addCollectionPayload
@@ -7,7 +7,7 @@ from payload.postPayload import addCollectionPayload
 url = getConfig()['API']['endpoint'] + APIResource.createCollection
 
 #Creating a collection
-post_response = requests.post(url, json=addCollectionPayload(), headers=getHeaders())
+post_response = requests.post(url, json=addCollectionPayload("Sample"+str(getRandomNumber())), headers=getHeaders())
 
 print(post_response.status_code)
 #Converting it into json

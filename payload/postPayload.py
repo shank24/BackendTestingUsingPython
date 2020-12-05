@@ -1,8 +1,8 @@
-def addCollectionPayload():
+def addCollectionPayload(name):
     body = {
         "collection": {
             "info": {
-                "name": "Sample Collection 872",
+                "name": name,
                 "description": "This is just a sample collection.",
                 "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
             },
